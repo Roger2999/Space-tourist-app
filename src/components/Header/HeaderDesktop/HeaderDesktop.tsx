@@ -1,0 +1,34 @@
+import { NavLink } from "react-router-dom";
+
+interface Props {
+  navigation: {
+    label: string;
+    route: string;
+    id: string;
+  }[];
+}
+export const HeaderDesktop = ({ navigation }: Props) => {
+  return (
+    <>
+      <header className="header hidden sm:flex items-center absolute z-10 top-0 right-0 w-[800px] max-w-[70%] min-h-20 max-h-[96px] mt-5 backdrop-blur-3xl bg-white/5">
+        <nav className="flex flex-wrap items-center gap-10 w-full min-h-20 pl-20">
+          {navigation.map((nav) => (
+            <NavLink
+              to={nav.route}
+              key={nav.id}
+              className={({ isActive }) =>
+                `flex items-center gap-2 ${
+                  isActive
+                    ? " border-b-4 border-gray-400 transition-all duration-100 ease scale-110"
+                    : ""
+                }`
+              }
+            >
+              <strong className="font-bold">{nav.id}</strong> {nav.label}
+            </NavLink>
+          ))}
+        </nav>
+      </header>
+    </>
+  );
+};

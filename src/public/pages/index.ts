@@ -1,0 +1,5 @@
+export * from "./DestinationPage/DestinationPage"
+export * from "./AboutPage/AboutPage"
+export * from "./CrewPage/CrewPage"
+export * from "./HomePage/HomePage"
+export * from "./TechnologyPage/TechnologyPage"
