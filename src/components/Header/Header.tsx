@@ -24,8 +24,8 @@ export const Header = () => {
             alt="logo-icon"
             decoding="async"
             loading="lazy"
-            height={40}
-            width={40}
+            height={30}
+            width={30}
           />
         </figure>
         {/* hamburger button */}

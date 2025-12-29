@@ -17,7 +17,7 @@ const HomePage = () => {
           </p>
         </article>
         <aside>
-          <div className="flex items-center justify-center w-40 h-40 bg-white rounded-full text-gray-950">
+          <div className="flex items-center justify-center w-40 h-40 bg-white/10 sm:backdrop-blur-sm rounded-full transition-all duration-100 ease hover:bg-white/10 active:scale-110 hover:scale-95">
             Explore
           </div>
         </aside>
