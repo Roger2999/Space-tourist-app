@@ -33,7 +33,7 @@ export const Header = () => {
 
         <button
           type="button"
-          className="hamburger-btn sm:hidden absolute z-20 right-10 top-10 hover:scale-110 transition-all duration-75 ease"
+          className="hamburger-btn sm:hidden fixed z-50 right-10 top-10 hover:scale-110 transition-all duration-75 ease"
           onClick={handleMenuButton}
         >
           {openMenu ? (
