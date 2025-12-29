@@ -10,7 +10,7 @@ interface Props {
 export const HeaderDesktop = ({ navigation }: Props) => {
   return (
     <>
-      <header className="header hidden sm:flex items-center absolute z-10 top-0 right-0 w-[800px] max-w-[70%] min-h-20 max-h-[96px] mt-5 backdrop-blur-3xl bg-white/5">
+      <section className="nav-container hidden sm:flex items-center absolute z-10 top-0 right-0 w-[800px] max-w-[70%] min-h-20 max-h-[96px] mt-5 backdrop-blur-3xl bg-white/5">
         <nav className="flex flex-wrap items-center gap-10 w-full min-h-20 pl-20">
           {navigation.map((nav) => (
             <NavLink
@@ -28,7 +28,7 @@ export const HeaderDesktop = ({ navigation }: Props) => {
             </NavLink>
           ))}
         </nav>
-      </header>
+      </section>
     </>
   );
 };

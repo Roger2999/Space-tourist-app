@@ -7,19 +7,22 @@ interface Props {
     id: string;
   }[];
   onClose: () => void;
+  openMenu: boolean;
 }
-export const HeaderMobile = ({ navigation, onClose }: Props) => {
+export const HeaderMobile = ({ navigation, onClose, openMenu }: Props) => {
   const handleOverlay = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
   };
   return (
     <>
-      <div
+      <aside
         onClick={onClose}
-        className="sm:hidden overlay fixed bg-opacity-50 bg-gray-800 w-full h-full"
+        className="overlay sm:hidden fixed bg-opacity-50 bg-gray-800 w-full h-full"
       >
         <nav
-          className="absolute top-0 right-0 w-[200px] max-w-[50%] h-dvh bg-gray-800 transition-all duration-100 ease"
+          className={`fixed top-0 right-0 w-[200px] max-w-[50%] h-dvh backdrop-blur-2xl bg-black/5 transform transition-transform duration-500 ease ${
+            openMenu ? "translate-x-0" : "translate-x-full"
+          }`}
           onClick={handleOverlay}
         >
           <ul className="flex flex-col gap-10 mt-20 w-full p-5">
@@ -43,7 +46,7 @@ export const HeaderMobile = ({ navigation, onClose }: Props) => {
             ))}
           </ul>
         </nav>
-      </div>
+      </aside>
     </>
   );
 };
