@@ -10,7 +10,6 @@ export const Header = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const handleMenuButton = () => {
     setOpenMenu(!openMenu);
-    console.log(openMenu);
   };
   return (
     <>

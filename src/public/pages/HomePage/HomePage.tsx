@@ -7,9 +7,7 @@ const HomePage = () => {
         <article className="flex flex-col justify-center items-start gap-10 w-[300px] max-w-[80%]">
           <h1 className="w-full">
             <p className="text-xl">So, you want to travel to</p>
-            <p className="w-full text-7xl font-normal tracking-[0.5rem]">
-              Space
-            </p>
+            <p className="text-7xl font-normal tracking-[0.6rem]">Space</p>
           </h1>
           <p className="text-sm text-justify">
             Let’s face it; if you want to go to space, you might as well
