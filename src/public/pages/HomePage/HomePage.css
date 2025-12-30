@@ -1,0 +1,10 @@
+@media (min-width: 640px) {
+  .home-page-container {
+    background-image: url("../../../assets/home/background-home-desktop.jpg");
+  }
+}
+@media (max-width: 640px) {
+  .home-page-container {
+    background-image: url("../../../assets/home/background-home-mobile.jpg");
+  }
+}

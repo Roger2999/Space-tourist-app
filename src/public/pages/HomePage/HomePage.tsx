@@ -1,7 +1,8 @@
+import "./HomePage.css";
 const HomePage = () => {
   return (
     <section
-      className={`home-container flex  justify-center items-center bg-[url('src/assets/home/background-home-desktop.jpg')] bg-cover bg-center bg-no-repeat pt-28 w-full h-full`}
+      className={`home-page-container flex  justify-center items-center bg-[url('src/assets/home/background-home-desktop.jpg')] bg-cover bg-center bg-no-repeat pt-28 w-full h-full`}
     >
       <article className="content flex flex-col items-center justify-center gap-10 w-full px-12 pb-10 sm:mt-20 sm:flex sm:flex-row sm:justify-between sm:items-center sm:w-full sm:px-24">
         <article className="title-container flex flex-col items-center justify-center gap-10 sm:flex sm:flex-col sm:justify-center sm:items-start sm:gap-10 sm:w-[300px] sm:max-w-[80%]">
