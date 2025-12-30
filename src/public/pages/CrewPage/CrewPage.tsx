@@ -20,9 +20,16 @@ const CrewPage = () => {
     bio: c.bio,
   }));
   const [selectedCrew, setSelectCrew] = useState<crewData | null>(null);
+  const [isActive, setIsActive] = useState<boolean>(false);
+  const [current, setCurrent] = useState<number>(0);
   useEffect(() => {
-    setSelectCrew(data.crew[0]);
-  }, []);
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % crewMapData.length);
+    }, 6000);
+    setSelectCrew(crewMapData[current]);
+
+    return () => clearInterval(interval);
+  }, [current]);
 
   return (
     <>
@@ -32,7 +39,7 @@ const CrewPage = () => {
             <span>02</span> MEET YOUR CREW
           </h1>
           {selectedCrew && (
-            <article key={selectedCrew.role} className="flex flex-col gap-4">
+            <article key={selectedCrew.role} className={`flex flex-col gap-4`}>
               <h2 className="text-3xl">{selectedCrew.role}</h2>
               <h3 className="text-5xl">{selectedCrew.name}</h3>
               <p className="text-sm">{selectedCrew.bio}</p>
@@ -41,7 +48,10 @@ const CrewPage = () => {
           <section className="flex gap-4">
             {crewMapData.map((c) => (
               <button
-                onClick={() => setSelectCrew(c)}
+                onClick={() => {
+                  setSelectCrew(c);
+                  setIsActive(!isActive);
+                }}
                 key={c.role}
                 className=" bg-gray-50 w-5 h-5 rounded-full
                 transition-transform duration-200 ease focus:bg-gray-600 focus:scale-110"
@@ -54,7 +64,7 @@ const CrewPage = () => {
             <img
               src={selectedCrew.images.png}
               alt="crew-photo"
-              className="min-w-64 h-80"
+              className="w-72"
               loading="lazy"
               decoding="async"
             />
