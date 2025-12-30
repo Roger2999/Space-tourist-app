@@ -20,7 +20,7 @@ export const HeaderMobile = ({ navigation, onClose, openMenu }: Props) => {
         className="overlay sm:hidden fixed bg-opacity-50 bg-gray-800 w-full h-full"
       >
         <nav
-          className={`fixed top-0 right-0 w-[200px] max-w-[50%] h-dvh backdrop-blur-2xl bg-black/5 transform transition-transform duration-500 ease ${
+          className={`fixed top-0 right-0 w-[200px] max-w-[70%] h-dvh backdrop-blur-2xl bg-black/5 transform transition-transform duration-500 ease ${
             openMenu ? "translate-x-0" : "translate-x-full"
           }`}
           onClick={handleOverlay}
