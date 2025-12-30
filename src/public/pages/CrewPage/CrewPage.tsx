@@ -1,6 +1,8 @@
 import { useState } from "react";
 import data from "../../../data/data.json";
 import { useInterval } from "../../../hooks/useInterval";
+import "./CrewPage.css";
+
 export type crewData = {
   name: string;
   images: {
@@ -26,7 +28,9 @@ const CrewPage = () => {
   useInterval<crewData>(6000, current, setCurrent, setSelectCrew, crewMapData);
   return (
     <>
-      <div className="flex flex-col gap-10 sm:flex sm:flex-row sm:justify-center sm:gap-0 bg-[url('src/assets/destination/background-destination-desktop.jpg')] bg-cover bg-center bg-no-repeat pt-28 sm:w-full sm:h-full">
+      <div
+        className={`crew-page-container flex flex-col gap-10 sm:flex sm:flex-row sm:justify-center sm:gap-0  bg-cover bg-center bg-no-repeat pt-28 sm:w-full sm:h-full`}
+      >
         <section className="flex-1 flex flex-col justify-around gap-14 w-full px-10 sm:px-24 sm:gap-0">
           <h1 className="">
             <span>02</span> MEET YOUR CREW
