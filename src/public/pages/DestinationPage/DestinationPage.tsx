@@ -4,7 +4,7 @@ import { PlanetsNav } from "../../../components";
 
 const DestinationPage = () => {
   return (
-    <div
+    <section
       className={`destination-page-container flex flex-col  justify-center items-center bg-cover bg-center bg-no-repeat pt-28 pb-8 px-8 sm:px-20 w-full h-full`}
     >
       <h1 className="w-full my-7 ">01 PICK YOUR DESTINATION</h1>
@@ -13,7 +13,7 @@ const DestinationPage = () => {
         <PlanetsNav />
         <Outlet />
       </article>
-    </div>
+    </section>
   );
 };
 export default DestinationPage;

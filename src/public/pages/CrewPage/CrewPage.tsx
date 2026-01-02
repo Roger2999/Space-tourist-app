@@ -28,7 +28,7 @@ const CrewPage = () => {
   useInterval<crewData>(6000, current, setCurrent, setSelectCrew, crewMapData);
   return (
     <>
-      <div
+      <section
         className={`crew-page-container flex flex-col gap-10 sm:flex sm:flex-row sm:justify-center sm:gap-0  bg-cover bg-center bg-no-repeat pt-28 sm:w-full sm:h-full`}
       >
         <section className="flex-1 flex flex-col justify-around gap-14 w-full px-10 sm:px-24 sm:gap-0">
@@ -42,7 +42,7 @@ const CrewPage = () => {
               <p className="text-sm">{selectedCrew.bio}</p>
             </article>
           )}
-          <section className="flex justify-center items-center gap-4">
+          <article className="flex justify-center items-center gap-4">
             {crewMapData.map((c) => (
               <button
                 onClick={() => {
@@ -53,7 +53,7 @@ const CrewPage = () => {
                 transition-transform duration-200 ease focus:bg-gray-600 focus:scale-110"
               />
             ))}
-          </section>
+          </article>
         </section>
         <aside className="flex-1 flex justify-center items-end">
           {selectedCrew && (
@@ -66,7 +66,7 @@ const CrewPage = () => {
             />
           )}
         </aside>
-      </div>
+      </section>
     </>
   );
 };

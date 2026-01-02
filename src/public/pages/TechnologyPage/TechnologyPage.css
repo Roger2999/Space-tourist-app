@@ -1,0 +1,10 @@
+@media (min-width: 640px) {
+  .technology-page-container {
+    background-image: url("../../../assets/technology/background-technology-desktop.jpg");
+  }
+}
+@media (max-width: 640px) {
+  .technology-page-container {
+    background-image: url("../../../assets/technology/background-technology-mobile.jpg");
+  }
+}
