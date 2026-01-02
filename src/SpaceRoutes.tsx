@@ -25,9 +25,9 @@ export const SpaceRoutes = () => {
             <Route path="/crew" element={<CrewPage />} />
             <Route path="/destination" element={<DestinationPage />}>
               <Route index element={<Moon />} />
-              <Route path="mars" element={<Mars />} />
-              <Route path="europa" element={<Europa />} />
-              <Route path="titan" element={<Titan />} />
+              <Route path="Mars" element={<Mars />} />
+              <Route path="Europa" element={<Europa />} />
+              <Route path="Titan" element={<Titan />} />
             </Route>
             <Route path="/tech" element={<TechnologyPage />} />
           </Routes>
