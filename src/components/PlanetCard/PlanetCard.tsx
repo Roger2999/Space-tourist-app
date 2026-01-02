@@ -18,6 +18,7 @@ export const PlanetCard = ({
         <figure className="flex items-center justify-center flex-1">
           <img
             src={img}
+            alt="planet-photo"
             loading="lazy"
             decoding="async"
             className="w-52 h-52 sm:w-52 sm:h-52 md:w-72 md:h-72"
@@ -25,7 +26,7 @@ export const PlanetCard = ({
         </figure>
         <section className="flex flex-col gap-5 flex-1">
           <h2 className="text-5xl mt-5">{title}</h2>
-          <h3>{description}</h3>
+          <h3 className="text-justify">{description}</h3>
           <article className="flex items-center gap-10 mt-5 border-t-[0.1rem]">
             <div className="">
               <p className="text-sm">Avg. distance</p>{" "}
