@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import planets from "../../data/data.json";
 export const PlanetsNav = () => {
   return (
-    <nav className="flex gap-6">
+    <nav className="flex ml-0 gap-6 mb-14 sm:mb-0 sm:justify-center sm:ml-60">
       <NavLink
         end
         to={""}

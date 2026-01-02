@@ -14,7 +14,15 @@ export const PlanetCard = ({
 }: Props) => {
   return (
     <>
-      <div className="flex flex-col gap-20 sm:flex-row sm:gap-6">
+      <div className="flex flex-col gap-20 sm:flex-row sm:gap-10">
+        <figure className="flex items-center justify-center flex-1">
+          <img
+            src={img}
+            loading="lazy"
+            decoding="async"
+            className="w-52 h-52 sm:w-52 sm:h-52 md:w-72 md:h-72"
+          />
+        </figure>
         <section className="flex flex-col gap-5 flex-1">
           <h2 className="text-5xl mt-5">{title}</h2>
           <h3>{description}</h3>
@@ -30,14 +38,6 @@ export const PlanetCard = ({
             <p> </p>
           </article>
         </section>
-        <figure className="flex items-center justify-center flex-1">
-          <img
-            src={img}
-            loading="lazy"
-            decoding="async"
-            className="w-[200px] h-[200px] "
-          />
-        </figure>
       </div>
     </>
   );
