@@ -1,6 +1,6 @@
 import { PlanetCard } from "../../../components";
 import titanImg from "../../../assets/destination/image-titan.png";
-export const Titan = () => {
+const Titan = () => {
   return (
     <PlanetCard
       title="Titan"
@@ -13,3 +13,4 @@ export const Titan = () => {
     />
   );
 };
+export default Titan;

@@ -1,6 +1,6 @@
 import { PlanetCard } from "../../../components";
 import europaImg from "../../../assets/destination/image-europa.png";
-export const Europa = () => {
+const Europa = () => {
   return (
     <PlanetCard
       title="Europa"
@@ -14,3 +14,4 @@ export const Europa = () => {
     />
   );
 };
+export default Europa;

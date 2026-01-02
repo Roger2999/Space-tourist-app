@@ -1,6 +1,6 @@
 import { PlanetCard } from "../../../components";
 import marsImg from "../../../assets/destination/image-mars.png";
-export const Mars = () => {
+const Mars = () => {
   return (
     <PlanetCard
       title="MARS"
@@ -13,3 +13,4 @@ export const Mars = () => {
     />
   );
 };
+export default Mars;

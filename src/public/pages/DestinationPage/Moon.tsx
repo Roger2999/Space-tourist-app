@@ -1,6 +1,6 @@
 import { PlanetCard } from "../../../components";
 import moonImg from "../../../assets/destination/image-moon.png";
-export const Moon = () => {
+const Moon = () => {
   return (
     <PlanetCard
       title="Moon"
@@ -13,3 +13,4 @@ export const Moon = () => {
     />
   );
 };
+export default Moon;
