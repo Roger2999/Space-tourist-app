@@ -29,12 +29,12 @@ const TechnologyPage = () => {
 
   return (
     <section className="technology-page-container flex flex-col justify-center bg-cover bg-center bg-no-repeat pt-28 w-full h-full">
-      <section className="content flex flex-col w-full h-full gap-20 px-8 md:flex-row md:gap-10">
+      <section className="content flex flex-col w-full h-full gap-20 px-10 pb-10 sm:pb-0 sm:px-14 md:px-20 md:pb-0 md:pr-0 md:flex-row md:gap-10">
         <article className="flex flex-1 flex-col justify-start gap-10 sm:gap-28">
           <h1 className="text-xl">03 SPACE LAUNCH 101</h1>
           <article className="flex flex-col gap-5">
             <div className="flex gap-10 w-full min-h-48 md:gap-14 ">
-              <div className="flex flex-col items-center gap-5 justify-evenly md:justify-center">
+              <div className="flex flex-col items-center gap-5 justify-evenly">
                 {technologies.map((tech) => (
                   <button
                     className={`flex justify-center items-center w-14 h-14 rounded-full  border-[0.1rem] border-gray-400 active:bg-gray-50 active:text-gray-900
