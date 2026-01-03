@@ -39,6 +39,7 @@ const TechnologyPage = () => {
               <div className="flex flex-col items-center gap-5 justify-evenly">
                 {technologies.map((tech) => (
                   <button
+                    key={tech.id}
                     className={`flex justify-center items-center w-14 h-14 rounded-full  border-[0.1rem] border-gray-400 active:bg-gray-50 active:text-gray-900
                     `}
                     onClick={() => setSelectedTechnology(tech)}
