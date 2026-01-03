@@ -1,6 +1,7 @@
 import "./TechnologyPage.css";
 import data from "../../../data/data.json";
 import { useEffect, useState } from "react";
+import { useInterval } from "../../../hooks/useInterval";
 
 type Technology = {
   id: string;
@@ -21,12 +22,13 @@ const TechnologyPage = () => {
     },
     description: tech.description,
   }));
+  const [current, setCurrent] = useState<number>(0);
   const [selectedTechnology, setSelectedTechnology] =
     useState<Technology | null>(null);
   useEffect(() => {
     setSelectedTechnology(technologies[0]);
   }, []);
-
+  useInterval(6000, current, setCurrent, setSelectedTechnology, technologies);
   return (
     <section className="technology-page-container flex flex-col justify-center bg-cover bg-center bg-no-repeat pt-28 w-full h-full">
       <section className="content flex flex-col w-full h-full gap-20 px-10 pb-10 sm:pb-0 sm:px-14 md:px-20 md:pb-0 md:pr-0 md:flex-row md:gap-10">
