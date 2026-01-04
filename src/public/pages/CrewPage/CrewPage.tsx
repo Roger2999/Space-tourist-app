@@ -35,8 +35,8 @@ const CrewPage = () => {
       <section
         className={`crew-page-container flex flex-col gap-10 sm:flex sm:flex-row sm:justify-center sm:gap-0  bg-cover bg-center bg-no-repeat pt-28 sm:w-full sm:h-full`}
       >
-        <section className="flex-1 flex flex-col justify-around gap-14 w-full px-10 sm:px-24 sm:gap-0">
-          <h1 className="relative title text-xl bottom-20">
+        <section className="flex-1 flex flex-col justify-around gap-14 w-full px-10 sm:pt-8 md:pt-0 md:px-24 md:gap-0">
+          <h1 className="relative title text-xl sm:bottom-16 sm:-top-14  bottom-0">
             <span>02</span> MEET YOUR CREW
           </h1>
           {selectedCrew && (
