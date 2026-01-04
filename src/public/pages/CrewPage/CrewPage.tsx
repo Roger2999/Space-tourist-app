@@ -65,7 +65,7 @@ const CrewPage = () => {
             <img
               src={selectedCrew.images.png}
               alt="crew-photo"
-              className="w-72"
+              className="w-96"
               loading="lazy"
               decoding="async"
             />
