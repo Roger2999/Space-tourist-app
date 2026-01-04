@@ -2,7 +2,13 @@ import { SpaceApp } from "./SpaceApp";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { RouterLoader } from "./components";
-import { Europa, Mars, Moon, Titan } from "./utilites/lazyImports";
+import {
+  Europa,
+  Mars,
+  Moon,
+  PageNotFound,
+  Titan,
+} from "./utilites/lazyImports";
 
 export const SpaceRoutes = () => {
   const HomePage = lazy(() => import("./public/pages/HomePage/HomePage"));
@@ -12,10 +18,6 @@ export const SpaceRoutes = () => {
   );
   const TechnologyPage = lazy(
     () => import("./public/pages/TechnologyPage/TechnologyPage")
-  );
-
-  const PageNotFound = lazy(
-    () => import("./components/PageNotFound/PageNotFound")
   );
 
   return (

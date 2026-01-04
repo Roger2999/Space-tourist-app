@@ -8,3 +8,6 @@ export const Europa = lazy(
 export const Titan = lazy(
   () => import("../public/pages/DestinationPage/Titan")
 );
+export const PageNotFound = lazy(
+  () => import("../components/PageNotFound/PageNotFound")
+);
