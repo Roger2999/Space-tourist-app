@@ -26,13 +26,13 @@ export const PlanetCard = ({
         </figure>
         <section className="flex flex-col gap-5 flex-1">
           <h2 className="text-5xl mt-5">{title}</h2>
-          <h3 className="text-justify">{description}</h3>
+          <p className="description text-justify">{description}</p>
           <article className="flex items-center gap-10 mt-5 border-t-[0.1rem]">
-            <div className="">
+            <div className="date">
               <p className="text-sm">Avg. distance</p>{" "}
               <p className="text-xl">{distance}</p>
             </div>
-            <div>
+            <div className="date">
               <p className="text-sm">Est. travel time</p>{" "}
               <p className="text-xl">{time}</p>
             </div>

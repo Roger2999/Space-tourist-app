@@ -17,14 +17,14 @@ export const HeaderDesktop = ({ navigation }: Props) => {
               to={nav.route}
               key={nav.id}
               className={({ isActive }) =>
-                `flex items-center gap-2 ${
+                `nav-link flex items-center gap-2 text-lg ${
                   isActive
                     ? " border-b-4 border-gray-400 transition-all duration-100 ease scale-110"
                     : ""
                 }`
               }
             >
-              <strong className="font-bold">{nav.id}</strong> {nav.label}
+              <strong className="text-gray-400">{nav.id}</strong> {nav.label}
             </NavLink>
           ))}
         </nav>

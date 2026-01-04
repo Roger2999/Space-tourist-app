@@ -33,7 +33,7 @@ const TechnologyPage = () => {
     <section className="technology-page-container flex flex-col justify-center bg-cover bg-center bg-no-repeat pt-28 w-full h-full">
       <section className="content flex flex-col w-full h-full gap-20 px-10 pb-10 sm:pb-0 sm:px-14 md:px-20 md:pb-0 md:pr-0 md:flex-row md:gap-10">
         <article className="flex flex-1 flex-col justify-start gap-10 sm:gap-28">
-          <h1 className="text-xl">03 SPACE LAUNCH 101</h1>
+          <h1 className="title text-xl my-7">03 SPACE LAUNCH 101</h1>
           <article className="flex flex-col gap-5">
             <div className="flex gap-10 max-w-full min-h-72 md:gap-14 ">
               <div className="flex flex-col items-center justify-evenly">
@@ -58,7 +58,7 @@ const TechnologyPage = () => {
                     <h3 className="text-3xl sm:text-5xl ">
                       {selectedTechnology.name}
                     </h3>
-                    <p className=" text-justify text-sm">
+                    <p className="description text-justify text-sm">
                       {selectedTechnology.description}
                     </p>
                   </>

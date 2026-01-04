@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 const HomePage = () => {
+  const navigate = useNavigate();
   return (
     <section
       className={`home-page-container flex  justify-center items-center bg-[url('src/assets/home/background-home-desktop.jpg')] bg-cover bg-center bg-no-repeat pt-28 w-full h-full`}
@@ -19,9 +21,12 @@ const HomePage = () => {
           </p>
         </article>
         <aside className="flex flex-1  justify-end items-center">
-          <div className="explore-btn flex items-center justify-center w-48 h-48 sm:w-60 sm:h-60 bg-white rounded-full text-[46px] text-gray-950 transition-all duration-100 ease hover:text-gray-500">
+          <button
+            onClick={() => navigate("/destination")}
+            className="explore-btn flex items-center justify-center w-48 h-48 sm:w-60 sm:h-60 bg-white rounded-full text-[46px] text-gray-950 transition-all duration-100 ease hover:text-gray-500"
+          >
             Explore
-          </div>
+          </button>
         </aside>
       </article>
     </section>

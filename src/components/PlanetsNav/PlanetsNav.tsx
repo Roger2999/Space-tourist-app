@@ -7,7 +7,9 @@ export const PlanetsNav = () => {
         end
         to={""}
         className={({ isActive }) =>
-          `h-9 text-gray-400 ${isActive ? "border-b-4 text-gray-50" : ""}`
+          `nav-link h-9 text-gray-400 text-xl ${
+            isActive ? "border-b-4 text-gray-50" : ""
+          }`
         }
       >
         Moon
@@ -17,7 +19,9 @@ export const PlanetsNav = () => {
           key={planet.name}
           to={planet.name}
           className={({ isActive }) =>
-            `h-9 text-gray-400 ${isActive ? "border-b-4 text-gray-50" : ""}`
+            `nav-link h-9 text-gray-400 text-xl ${
+              isActive ? "border-b-4 text-gray-50" : ""
+            }`
           }
         >
           {planet.name}
