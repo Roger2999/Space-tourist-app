@@ -4,6 +4,7 @@ import { useInterval } from "../../../hooks/useInterval";
 import "./CrewPage.css";
 
 export type crewData = {
+  currentPos: number;
   name: string;
   images: {
     png: string;
@@ -14,6 +15,7 @@ export type crewData = {
 };
 const CrewPage = () => {
   const crewMapData = data.crew.map((c) => ({
+    currentPos: c.currentPos,
     name: c.name,
     images: {
       png: c.images.png,
@@ -22,7 +24,9 @@ const CrewPage = () => {
     role: c.role,
     bio: c.bio,
   }));
-  const [selectedCrew, setSelectCrew] = useState<crewData | null>(null);
+  const [selectedCrew, setSelectCrew] = useState<crewData | null>(
+    crewMapData[0]
+  );
   const [current, setCurrent] = useState<number>(0);
   //hook reutilizable para efecto de carrusel
   useInterval<crewData>(6000, current, setCurrent, setSelectCrew, crewMapData);
@@ -47,6 +51,7 @@ const CrewPage = () => {
               <button
                 onClick={() => {
                   setSelectCrew(c);
+                  setCurrent(c.currentPos);
                 }}
                 key={c.role}
                 className=" bg-gray-50 w-5 h-5 rounded-full
