@@ -12,58 +12,56 @@ export const Header = () => {
     setOpenMenu(!openMenu);
   };
   return (
-    <>
-      <header
-        className="header-container flex justify-between w-full absolute 
+    <header
+      className="header-container flex justify-between w-full absolute 
       top-0"
-      >
-        {/* logo */}
-        <figure className="logo flex justify-center items-center relative top-10 left-10 rounded-full">
-          <img
-            src={logoIcon}
-            alt="logo-icon"
-            decoding="async"
-            loading="lazy"
-            height={30}
-            width={30}
-          />
-        </figure>
-        {/* hamburger button */}
+    >
+      {/* logo */}
+      <figure className="logo flex justify-center items-center relative top-10 left-10 rounded-full">
+        <img
+          src={logoIcon}
+          alt="logo-icon"
+          decoding="async"
+          loading="lazy"
+          height={30}
+          width={30}
+        />
+      </figure>
+      {/* hamburger button */}
 
-        <button
-          type="button"
-          className="hamburger-btn sm:hidden fixed z-50 right-10 top-10 hover:scale-110 transition-all duration-75 ease"
-          onClick={handleMenuButton}
-        >
-          {openMenu ? (
-            <img
-              src={iconClose}
-              width={20}
-              height={20}
-              loading="lazy"
-              decoding="async"
-              alt="hamburger-icon"
-            />
-          ) : (
-            <img
-              src={iconHamburger}
-              width={20}
-              height={20}
-              loading="lazy"
-              decoding="async"
-              alt="hamburger-icon"
-            />
-          )}
-        </button>
-        <HeaderDesktop navigation={navigation} />
-        {openMenu && (
-          <HeaderMobile
-            openMenu={openMenu}
-            onClose={() => setOpenMenu(false)}
-            navigation={navigation}
+      <button
+        type="button"
+        className="hamburger-btn sm:hidden fixed z-50 right-10 top-10 hover:scale-110 transition-all duration-75 ease"
+        onClick={handleMenuButton}
+      >
+        {openMenu ? (
+          <img
+            src={iconClose}
+            width={20}
+            height={20}
+            loading="lazy"
+            decoding="async"
+            alt="hamburger-icon"
+          />
+        ) : (
+          <img
+            src={iconHamburger}
+            width={20}
+            height={20}
+            loading="lazy"
+            decoding="async"
+            alt="hamburger-icon"
           />
         )}
-      </header>
-    </>
+      </button>
+      <HeaderDesktop navigation={navigation} />
+      {openMenu && (
+        <HeaderMobile
+          openMenu={openMenu}
+          onClose={() => setOpenMenu(false)}
+          navigation={navigation}
+        />
+      )}
+    </header>
   );
 };
