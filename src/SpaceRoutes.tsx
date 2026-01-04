@@ -1,25 +1,20 @@
 import { SpaceApp } from "./SpaceApp";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import { RouterLoader } from "./components";
 import {
+  CrewPage,
+  DestinationPage,
   Europa,
+  HomePage,
   Mars,
   Moon,
   PageNotFound,
+  TechnologyPage,
   Titan,
 } from "./utilites/lazyImports";
 
 export const SpaceRoutes = () => {
-  const HomePage = lazy(() => import("./public/pages/HomePage/HomePage"));
-  const CrewPage = lazy(() => import("./public/pages/CrewPage/CrewPage"));
-  const DestinationPage = lazy(
-    () => import("./public/pages/DestinationPage/DestinationPage")
-  );
-  const TechnologyPage = lazy(
-    () => import("./public/pages/TechnologyPage/TechnologyPage")
-  );
-
   return (
     <BrowserRouter>
       <SpaceApp>
