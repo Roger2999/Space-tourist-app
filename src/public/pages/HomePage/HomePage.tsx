@@ -4,7 +4,7 @@ const HomePage = () => {
     <section
       className={`home-page-container flex  justify-center items-center bg-[url('src/assets/home/background-home-desktop.jpg')] bg-cover bg-center bg-no-repeat pt-28 w-full h-full`}
     >
-      <article className="content flex flex-col items-center justify-center gap-10 w-full px-12 pb-10 sm:mt-20 sm:flex sm:flex-row sm:justify-between sm:items-center sm:w-full sm:px-24">
+      <article className="content flex flex-col items-center justify-center gap-10 w-full px-12 pb-10 sm:mt-20 sm:flex sm:flex-row sm:justify-between sm:items-center sm:w-full sm:px-24 lg:px-56">
         <article className="title-container flex flex-col items-center justify-center gap-10 sm:flex sm:flex-col sm:justify-center sm:items-start sm:gap-10 sm:w-[300px] sm:max-w-[80%]">
           <h1 className="sm:w-full">
             <p className="text-xl mb-4">So, you want to travel to</p>
@@ -18,7 +18,7 @@ const HomePage = () => {
           </p>
         </article>
         <aside>
-          <div className="flex items-center justify-center w-48 h-48 bg-white/10 sm:backdrop-blur-sm rounded-full transition-all duration-100 ease hover:bg-white/10 active:scale-110 hover:scale-95">
+          <div className="flex items-center justify-center w-48 h-48 sm:w-60 sm:h-60 sm:backdrop-blur-sm bg-white/40  rounded-full transition-all duration-100 ease hover:bg-white/30 active:scale-110 hover:scale-95">
             Explore
           </div>
         </aside>
