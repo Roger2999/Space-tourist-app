@@ -1,4 +1,5 @@
 :root {
-  --text-primary: #ffffff;
-  --text-secondary: #bbbbbb;
+  --font-title: "Bellefair", sans-serif;
+  --font-metric: "Barlow Condensed", sans-serif;
+  --font-p: "Barlow", sans-serif;
 }

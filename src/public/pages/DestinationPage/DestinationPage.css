@@ -8,3 +8,20 @@
     background-image: url("../../../assets/destination/background-destination-mobile.jpg");
   }
 }
+h1 strong {
+  font-family: var(--font-title);
+}
+h1 span {
+  font-family: var(--font-metric);
+}
+p {
+  font-family: var(--font-p);
+}
+div .explore-btn {
+  font-family: var(--font-title);
+  box-shadow: rgba(20px, 20px, 20px, 0.3);
+}
+div .explore-btn:hover {
+  font-family: var(--font-title);
+  box-shadow: 0px 0px 0px 70px rgba(201, 201, 207, 0.2);
+}
