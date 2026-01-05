@@ -17,7 +17,7 @@ export const HeaderMobile = ({ navigation, onClose, openMenu }: Props) => {
     <>
       <aside
         onClick={onClose}
-        className="overlay sm:hidden fixed bg-opacity-50 bg-gray-800 w-full h-full"
+        className="overlay sm:hidden fixed z-50 bg-opacity-50 bg-gray-800 w-full h-full"
       >
         <nav
           className={`fixed top-0 right-0 w-[200px] max-w-[70%] h-screen backdrop-blur-2xl bg-black/5 transform transition-transform duration-500 ease ${
