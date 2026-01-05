@@ -33,26 +33,28 @@ const CrewPage = () => {
   return (
     <>
       <section className="crew-page-container flex flex-col justify-center bg-cover bg-center bg-no-repeat pt-28 w-full h-full">
-        <h1 className="title w-full my-7 text-xl px-10 sm:px-14 md:px-20">
+        <h1 className="title w-full my-7 text-xl xl:text-2xl px-10 sm:px-14 md:px-20 xl:px-32">
           <span>02</span> MEET YOUR CREW
         </h1>
-        <article className="content flex flex-col w-full h-full gap-20 px-10 pb-10 sm:pb-0 sm:px-14 sm:flex-col md:px-20 md:pb-0 md:pr-0 md:flex-row md:gap-10">
-          <section className="flex-1 flex flex-col justify-around gap-14 w-full px-10 sm:pt-8 md:pt-0 md:px-24 md:gap-0">
+        <article className="content flex flex-col w-full h-full gap-20 px-10 pb-10 sm:pb-0 sm:px-14 sm:flex-col md:px-20 md:pb-0 md:pr-0 md:flex-row md:gap-10 xl:px-36 xl:gap-16">
+          <section className="flex-1 flex flex-col justify-around gap-14 w-full px-10 sm:pt-8 md:pt-0 md:px-24 md:gap-0 xl:px-28 xl:justify-center xl:gap-6">
             {selectedCrew && (
               <article
                 key={selectedCrew.role}
-                className={`flex flex-col gap-4`}
+                className={`flex flex-col gap-4 xl:gap-5`}
               >
-                <h2 className="role text-3xl text-gray-400">
+                <h2 className="role text-3xl xl:text-4xl text-gray-400">
                   {selectedCrew.role}
                 </h2>
-                <h3 className="text-3xl sm:text-6xl">{selectedCrew.name}</h3>
-                <p className="description text-base text-gray-400">
+                <h3 className="text-3xl sm:text-6xl xl:text-8xl xl:leading-tight">
+                  {selectedCrew.name}
+                </h3>
+                <p className="description text-base xl:text-lg xl:leading-relaxed text-gray-400">
                   {selectedCrew.bio}
                 </p>
               </article>
             )}
-            <article className="flex justify-start items-center gap-8">
+            <article className="flex justify-start items-center gap-8 xl:gap-9">
               {crewMapData.map((c) => (
                 <button
                   onClick={() => {
@@ -60,7 +62,7 @@ const CrewPage = () => {
                     setCurrent(c.currentPos);
                   }}
                   key={c.role}
-                  className=" bg-gray-50 w-3 h-3 rounded-full
+                  className=" bg-gray-50 w-3 h-3 xl:w-3.5 xl:h-3.5 rounded-full
                 transition-transform duration-200 ease focus:bg-gray-600 focus:scale-110"
                 />
               ))}
@@ -71,7 +73,7 @@ const CrewPage = () => {
               <img
                 src={selectedCrew.images.png}
                 alt="crew-photo"
-                className="w-96"
+                className="w-96 xl:w-[550px]"
                 loading="lazy"
                 decoding="async"
               />

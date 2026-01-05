@@ -21,7 +21,7 @@ export const PlanetCard = ({
             alt="planet-photo"
             loading="lazy"
             decoding="async"
-            className="w-52 h-52 sm:w-60 sm:h-60 md:min-w-96 md:min-h-96 xl:w-[584px] xl:h-[584px]"
+            className="w-52 h-52 sm:w-60 sm:h-60 md:min-w-80 md:min-h-80 xl:w-[584px] xl:h-[584px]"
           />
         </figure>
         <section className="flex flex-col gap-5 flex-1">
