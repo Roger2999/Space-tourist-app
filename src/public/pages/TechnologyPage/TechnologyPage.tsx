@@ -31,16 +31,18 @@ const TechnologyPage = () => {
   useInterval(6000, current, setCurrent, setSelectedTechnology, technologies);
   return (
     <section className="technology-page-container flex flex-col justify-center bg-cover bg-center bg-no-repeat pt-28 w-full h-full">
-      <section className="content flex flex-col w-full h-full gap-20 px-10 pb-10 sm:pb-0 sm:px-14 md:px-20 md:pb-0 md:pr-0 md:flex-row md:gap-10">
-        <article className="flex flex-1 flex-col justify-start gap-10 sm:gap-28 order-2 sm:order-2 md:order-1">
-          <h1 className="title text-xl my-7">03 SPACE LAUNCH 101</h1>
+      <h1 className="title w-full my-7 text-xl px-10 sm:px-14 md:px-20">
+        03 SPACE LAUNCH 101
+      </h1>
+      <section className="content flex flex-col w-full h-full gap-20 px-10 pb-10 sm:pb-0 sm:px-14 sm:flex-col md:px-32 md:pb-0 md:pr-0 md:flex-row md:gap-10">
+        <article className="flex flex-1 flex-col justify-center items-center gap-10 sm:gap-28 order-2 sm:order-2 md:order-1">
           <article className="flex flex-col gap-5">
             <div className="flex gap-10 max-w-full min-h-72 md:gap-14 ">
               <div className="flex flex-col items-center justify-evenly">
                 {technologies.map((tech) => (
                   <button
                     key={tech.id}
-                    className={`flex justify-center items-center w-14 h-14 rounded-full  border-[0.1rem] border-gray-400 active:bg-gray-50 active:text-gray-900
+                    className={`flex justify-center items-center w-16 h-16 rounded-full  border-[0.1rem] border-gray-400 active:bg-gray-50 active:text-gray-900
                     `}
                     onClick={() => {
                       setSelectedTechnology(tech);
@@ -51,14 +53,14 @@ const TechnologyPage = () => {
                   </button>
                 ))}
               </div>
-              <article className="flex flex-col justify-start gap-10 w-[60%]">
-                <h2 className="text-sm">THE TERMINOLOGY...</h2>
+              <article className="flex flex-col justify-start gap-5 w-[60%]">
+                <h2 className="text-2xl">THE TERMINOLOGY...</h2>
                 {selectedTechnology && (
                   <>
-                    <h3 className="text-3xl sm:text-5xl ">
+                    <h3 className="text-3xl sm:text-6xl ">
                       {selectedTechnology.name}
                     </h3>
-                    <p className="description text-justify text-sm">
+                    <p className="description text-justify text-base">
                       {selectedTechnology.description}
                     </p>
                   </>

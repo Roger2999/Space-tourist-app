@@ -19,7 +19,7 @@ export const PlanetsNav = () => {
           key={planet.name}
           to={planet.name}
           className={({ isActive }) =>
-            `nav-link h-9 text-gray-400 text-xl ${
+            `nav-link h-9 text-gray-400 text-xl hover:border-b-4 ${
               isActive ? "border-b-4 text-gray-50" : ""
             }`
           }

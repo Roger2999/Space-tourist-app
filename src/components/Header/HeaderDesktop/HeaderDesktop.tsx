@@ -17,7 +17,7 @@ export const HeaderDesktop = ({ navigation }: Props) => {
               to={nav.route}
               key={nav.id}
               className={({ isActive }) =>
-                `nav-link flex items-center gap-2 text-lg ${
+                `nav-link flex items-center gap-2 text-lg hover:border-b-4 ${
                   isActive
                     ? " border-b-4 border-gray-400 transition-all duration-100 ease scale-110"
                     : ""

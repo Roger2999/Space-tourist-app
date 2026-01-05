@@ -9,7 +9,7 @@ const DestinationPage = () => {
     >
       <h1 className="title w-full my-7 text-xl">01 PICK YOUR DESTINATION</h1>
 
-      <article className="flex flex-col gap-0 sm:flex-col sm:gap-5 h-full">
+      <article className="flex flex-col items-center justify-center gap-0 sm:flex-col sm:gap-5 h-full">
         <PlanetsNav />
         <Outlet />
       </article>
