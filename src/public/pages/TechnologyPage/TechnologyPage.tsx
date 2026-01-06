@@ -53,7 +53,7 @@ const TechnologyPage = () => {
                   </button>
                 ))}
               </div>
-              <article className="flex flex-col justify-start gap-5 w-[60%] xl:gap-6">
+              <article className="flex flex-col justify-center gap-5 w-[60%] h-[500px] xl:gap-6">
                 <h2 className="text-2xl xl:text-3xl">THE TERMINOLOGY...</h2>
                 {selectedTechnology && (
                   <>

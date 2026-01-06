@@ -46,7 +46,7 @@ const CrewPage = () => {
                 <h2 className="role text-3xl xl:text-4xl text-gray-400">
                   {selectedCrew.role}
                 </h2>
-                <h3 className="text-3xl sm:text-6xl xl:text-8xl xl:leading-tight">
+                <h3 className="text-3xl sm:text-6xl xl:text-7xl xl:leading-tight">
                   {selectedCrew.name}
                 </h3>
                 <p className="description text-base xl:text-lg xl:leading-relaxed text-gray-400">
@@ -73,7 +73,7 @@ const CrewPage = () => {
               <img
                 src={selectedCrew.images.png}
                 alt="crew-photo"
-                className="w-96 xl:w-[550px]"
+                className="w-96 xl:w-[500px]"
                 loading="lazy"
                 decoding="async"
               />
