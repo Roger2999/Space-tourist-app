@@ -1,19 +1,18 @@
-Aplicación web desarrollada con **React 19 + TypeScript + Vite**, utilizando **TailwindCSS + DaisyUI** para un diseño atractivo y **Zustand + React Query** para el manejo avanzado de estado y datos.
-
-Su objetivo es ser una **base sólida para proyectos web escalables**, incluyendo autenticación, rutas privadas, formularios validados y un diseño totalmente responsive.
+Aplicación web interactiva desarrollada con **React 19 + TypeScript + Vite**, utilizando **TailwindCSS** para un diseño moderno y atractivo. Una experiencia inmersiva para explorar destinos espaciales, conocer a la tripulación y descubrir la tecnología utilizada en misiones espaciales.
 
 ---
 
 ## ✨ Características principales
 
-- 🔑 **Rutas privadas y públicas** con React Router DOM
-- 🎨 **TailwindCSS + DaisyUI** para estilos modernos y tematización
-- 📝 **Formularios reactivos** con React Hook Form + Zod (validación)
-- 📡 **Manejo de datos remoto** con TanStack React Query
-- ⚡ **Estado global ligero** con Zustand
-- 📱 **Diseño responsive** listo para mobile y desktop
-- 🔍 **Linting configurado** con ESLint y TypeScript-ESLint
-- 🛠️ Estructura modular y fácil de escalar
+- 🚀 **Exploración de destinos espaciales** - Navega entre Moon, Mars, Europa y Titan
+- 👨‍🚀 **Galería de tripulación** - Conoce a los miembros del equipo con carrusel automático
+- 🛰️ **Tecnología espacial** - Descubre vehículos de lanzamiento y tecnología avanzada
+- 🎨 **Diseño responsive** - Optimizado para mobile, tablet y desktop
+- 🎭 **Animaciones y transiciones** - Experiencia de usuario fluida y moderna
+- 🖼️ **Imágenes optimizadas** - Formatos WebP y PNG para mejor rendimiento
+- 🎯 **Navegación intuitiva** - Header responsive con menú móvil y desktop
+- ⚡ **Carga lazy** - Optimización de imágenes con lazy loading
+- 🔄 **Carruseles interactivos** - Para tripulación y tecnología con auto-rotación
 
 ---
 
@@ -22,12 +21,11 @@ Su objetivo es ser una **base sólida para proyectos web escalables**, incluyend
 - **Framework principal:** [React 19](https://react.dev/)
 - **Compilador & Bundler:** [Vite](https://vitejs.dev/)
 - **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
-- **Estilos:** [TailwindCSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/)
+- **Estilos:** [TailwindCSS](https://tailwindcss.com/)
 - **Gestión de estado:** [Zustand](https://zustand-demo.pmnd.rs/)
-- **Manejo de datos:** [TanStack React Query](https://tanstack.com/query/latest)
-- **Formularios & Validación:** [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
 - **Ruteo:** [React Router DOM](https://reactrouter.com/)
-- **Utilidades:** [Heroicons](https://heroicons.com/) + [Headless UI](https://headlessui.dev/)
+- **Fuentes:** [Fontsource](https://fontsource.org/) - Barlow, Barlow Condensed, Bellefair
+- **Linting:** ESLint + TypeScript-ESLint
 
 ---
 
@@ -35,16 +33,34 @@ Su objetivo es ser una **base sólida para proyectos web escalables**, incluyend
 
 ```
 src/
-  main.tsx                # Punto de entrada
-  components/             # Componentes reutilizables
-  public/pages/           # Páginas públicas (Home, About, Contact...)
-  private/                # Páginas privadas (Dashboard, Perfil, etc.)
-  stores/                 # Zustand stores
-  services/               # Servicios (auth, API, etc.)
-  hooks/                  # Custom hooks
-  models/                 # Modelos TypeScript
-  data/                   # Datos estáticos
-  assets/                 # Imágenes y SVGs
+  main.tsx                    # Punto de entrada
+  SpaceApp.tsx                # Componente principal de la aplicación
+  SpaceRoutes.tsx             # Configuración de rutas
+  components/                 # Componentes reutilizables
+    Header/                   # Header con navegación desktop y mobile
+    PlanetCard/               # Tarjeta de información de planetas
+    PlanetsNav/               # Navegación entre planetas
+    PageNotFound/             # Página 404
+    RouterLoader/             # Loader para lazy loading
+  public/pages/               # Páginas de la aplicación
+    HomePage/                 # Página de inicio
+    DestinationPage/          # Página de destinos (Moon, Mars, Europa, Titan)
+    CrewPage/                 # Página de tripulación
+    TechnologyPage/           # Página de tecnología
+  hooks/                      # Custom hooks
+    useInterval.ts            # Hook para carruseles automáticos
+  data/                       # Datos estáticos (JSON)
+    data.json                 # Datos de destinos, tripulación y tecnología
+    headerData.ts             # Datos de navegación
+  assets/                     # Imágenes y recursos
+    home/                     # Fondos de página de inicio
+    destination/              # Imágenes de planetas
+    crew/                     # Fotos de la tripulación
+    technology/               # Imágenes de tecnología
+    shared/                   # Iconos compartidos (logo, hamburger, close)
+  styles/                     # Estilos globales
+  utilites/                   # Utilidades
+    lazyImports.ts            # Importaciones lazy de componentes
 ```
 
 ---
@@ -55,7 +71,7 @@ src/
 
    ```bash
    git clone <url-del-repo>
-   cd projecttsx
+   cd Space-tourist-app
    ```
 
 2. **Instala dependencias**
@@ -76,25 +92,50 @@ src/
    npm run build
    ```
 
-5. **Previsualiza el build**
+5. **Previsualiza el build de producción**
+
    ```bash
    npm run preview
    ```
 
+6. **Ejecuta el linter**
+   ```bash
+   npm run lint
+   ```
+
 ---
 
-## 📸 Capturas
+## 📄 Páginas disponibles
 
-_Agrega aquí imágenes o gifs de tu aplicación en acción_
+- **Home** (`/homepage`) - Página de inicio con botón de exploración
+- **Destination** (`/destination`) - Explora los destinos espaciales disponibles
+  - Moon (`/destination`) - Destino por defecto
+  - Mars (`/destination/Mars`)
+  - Europa (`/destination/Europa`)
+  - Titan (`/destination/Titan`)
+- **Crew** (`/crew`) - Conoce a los miembros de la tripulación
+- **Technology** (`/tech`) - Descubre la tecnología espacial
+
+---
+
+## 🎨 Diseño y UX
+
+- **Responsive Design**: Adaptado para móviles, tablets y escritorio
+- **Fondos dinámicos**: Imágenes de fondo diferentes según el dispositivo
+- **Tipografía personalizada**: Fuentes Barlow, Barlow Condensed y Bellefair
+- **Transiciones suaves**: Animaciones en navegación y carruseles
+- **Optimización de imágenes**: Uso de formatos WebP y lazy loading
 
 ---
 
 ## 🔮 Futuras mejoras
 
-- 🌙 Implementar **dark mode avanzado**
-- 🌐 Internacionalización (**i18n**)
-- 🔒 Autenticación con JWT o OAuth
-- 📊 Integración con APIs externas
+- 🌙 Implementar **dark mode**
+- 🌐 Internacionalización (**i18n**) para múltiples idiomas
+- 📊 Integración con APIs de datos espaciales en tiempo real
+- 🎮 Animaciones más avanzadas con Framer Motion
+- 📱 Mejoras en la experiencia móvil
+- 🔍 Búsqueda y filtros avanzados
 
 ---
 
@@ -102,7 +143,7 @@ _Agrega aquí imágenes o gifs de tu aplicación en acción_
 
 Desarrollado por **Roger Gutiérrez Martínez**
 
-- 🌐 [https://portfolio-roger2999.netlify.app]
-- 🐙 [https://github.com/Roger2999]
+- 🌐 [https://space-tourist-app-kappa.vercel.app]
+- 🐙 [https://github.com/Roger2999/Space-tourist-app.git]
 
 ---
