@@ -7,7 +7,7 @@ const HomePage = () => {
       className={`home-page-container flex  justify-center items-center bg-[url('src/assets/home/background-home-desktop.jpg')] bg-cover bg-center bg-no-repeat pt-28 w-full h-full`}
     >
       <article className="content flex flex-col items-center justify-center w-full h-full px-12 pb-0 md:h-auto md:mt-20 sm:flex sm:flex-col sm:justify-between sm:items-center sm:gap-10 sm:h-auto  sm:w-full sm:px-12 sm:pr-20 md:flex-row lg:px-32">
-        <article className="title-container flex flex-1 flex-col items-center justify-center gap-10 pt-20 sm:pt-0 sm:flex sm:flex-col sm:justify-center sm:items-start sm:gap-0 sm:w-[500px] sm:max-w-[80%]">
+        <article className="title-container flex flex-1 flex-col items-center justify-center gap-10 sm:pt-0 sm:flex sm:flex-col sm:justify-center sm:items-start sm:gap-0 sm:w-[500px] sm:max-w-[80%]">
           <h1 className="title sm:flex sm:flex-col sm:items-center sm:justify-center sm:w-full md:block">
             <span className="text-2xl sm:text-4xl md:text-[32px] mb-4">
               So, you want to travel to
